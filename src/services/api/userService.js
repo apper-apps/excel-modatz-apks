@@ -1,3 +1,5 @@
+import React from "react";
+import Error from "@/components/ui/Error";
 import users from "@/services/mockData/users";
 
 let userData = [...users]
@@ -159,6 +161,6 @@ export {
   getById,
   create,
   update,
-  "delete": deleteUser,
+  deleteUser,
   search
 }
