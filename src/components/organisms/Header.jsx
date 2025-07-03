@@ -136,15 +136,15 @@ const Header = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             icon={isMobileMenuOpen ? 'X' : 'Menu'}
-          >
+>
             <span className="sr-only">Toggle menu</span>
           </Button>
+        </div>
 
         {/* Mobile Search Bar */}
         <div className="md:hidden pb-4">
           <SearchBar />
         </div>
-
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
