@@ -1,5 +1,3 @@
-import React from "react";
-import Error from "@/components/ui/Error";
 import users from "@/services/mockData/users";
 
 let userData = [...users]
@@ -112,14 +110,13 @@ const update = async (id, data) => {
     ...user,
     ...updateData,
     username: updateData.username ? updateData.username.toLowerCase() : user.username,
-    email: updateData.email ? updateData.email.toLowerCase() : user.email,
+email: updateData.email ? updateData.email.toLowerCase() : user.email,
     updatedAt: new Date()
   }
   
-  const { password: _, ...userWithoutPassword } = userData[userIndex]
+  const { password: _pwd, ...userWithoutPassword } = userData[userIndex]
   return userWithoutPassword
 }
-
 // Delete user
 const deleteUser = async (id) => {
   await delay(200)
